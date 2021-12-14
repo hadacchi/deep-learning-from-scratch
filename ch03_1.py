@@ -65,6 +65,6 @@ if __name__ == "__main__":
     print("ReLU function")
     plot_function(relu, "ReLU function")
 
-    print(f'X "=" \n{X}')
+    print(f"X = \n{X}")
     print(f"W = \n{W}")
     print(f"Y = \n{np.dot(X,W)}")
