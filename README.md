@@ -16,12 +16,27 @@
 - hardware
     - M1 Mackbook Air (2020モデル)
 - python
-    - mini-forge MacOSX arm64版
-    - `python -VV` の出力
+    - `poetry -V` の出力
+        ```
+        (main) $ poetry -V
+        Poetry version 1.1.12
+        ```
+    - `poetry run python -VV` の出力
+        ```
+        (main) $ poetry run python -VV
+        Python 3.10.1 (main, Dec  6 2021, 22:18:20) [Clang 13.0.0 (clang-1300.0.29.3)]
+        ```
+    - 実行は，poetry で `poetry run python ~~~`
+    - `alias po`
+        ```po='poetry run'```
+    - `alias pp`
+        ```pp='poetry run python'```
+    - ~~mini-forge MacOSX arm64版~~
+    - ~~`python -VV` の出力~~
       ```
       Python 3.9.7 | packaged by conda-forge | (default, Sep 29 2021, 19:22:19) [Clang 11.1.0 ]
       ```
-    - activate は次のコマンド
+    - ~~activate は次のコマンド~~
       ```shell
       conda activate dl-env
       ```
@@ -63,4 +78,8 @@
 ## ch04
 
 - ch04.py を実装
-- 交差エントロピー誤差を実装
+- `cross_entropy_error(y, t)` 交差エントロピー誤差を実装
+- バッチ推論の誤差を交差エントロピーで計算するのを実装
+- `numerical_diff` 数値微分を実装
+- `part_diff` 数値偏微分を実装
+- `gradient` 勾配計算を実装
